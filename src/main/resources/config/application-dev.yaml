@@ -1,0 +1,35 @@
+server:
+  port: 8085
+
+logging.level:
+  de.lab.inventory: DEBUG
+  org.springframework: WARN
+
+# Spring configuration
+spring:
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        ddl-auto: validate
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+        default_schema: car_db
+    show-sql: true
+  # Flyway db db config
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
+    schemas: car_db
+  # Datasource
+  datasource:
+    url: jdbc:h2:mem:car_db
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2
