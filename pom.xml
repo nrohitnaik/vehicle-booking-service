@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<h2database.version>1.4.200</h2database.version>
+		<h2database.version>2.0.206</h2database.version>
 		<mapstruct.version>1.3.1.Final</mapstruct.version>
 		<springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
 		<flyway-core.version>6.0.7</flyway-core.version>
